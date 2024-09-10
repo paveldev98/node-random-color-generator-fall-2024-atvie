@@ -14,13 +14,16 @@ importers:
       chroma-js:
         specifier: ^3.1.1
         version: 3.1.1
-      random-color-generator-ts:
-        specifier: ^1.0.1
-        version: 1.0.1
       random-hex:
         specifier: ^1.0.2
         version: 1.0.2
     devDependencies:
+      '@types/chalk':
+        specifier: ^2.2.0
+        version: 2.2.0
+      '@types/chroma-js':
+        specifier: ^2.4.4
+        version: 2.4.4
       '@types/node':
         specifier: ^22.5.4
         version: 22.5.4
@@ -28,8 +31,8 @@ importers:
         specifier: ^9.10.0
         version: 9.10.0
       eslint-config-upleveled:
-        specifier: ^8.6.21
-        version: 8.6.21(@babel/core@7.25.2)(@types/eslint@9.6.1)(@types/node@22.5.4)(@types/react-dom@18.3.0)(@types/react@18.3.5)(eslint@9.10.0)(globals@15.9.0)(typescript@5.6.2)
+        specifier: ^8.7.0
+        version: 8.7.0(@babel/core@7.25.2)(@types/eslint@9.6.1)(@types/node@22.5.4)(@types/react-dom@18.3.0)(@types/react@18.3.5)(eslint@9.10.0)(globals@15.9.0)(typescript@5.6.2)
       prettier:
         specifier: ^3.3.3
         version: 3.3.3
@@ -231,6 +234,13 @@ packages:
   '@pkgjs/parseargs@0.11.0':
     resolution: {integrity: sha512-+1VkjdD0QBLPodGrJUeqarH8VAIvQODIbwh9XpP5Syisf7YoQgsJKPNFoqqLQlu+VQ/tVSshMR6loPMn8U+dPg==}
     engines: {node: '>=14'}
+
+  '@types/chalk@2.2.0':
+    resolution: {integrity: sha512-1zzPV9FDe1I/WHhRkf9SNgqtRJWZqrBWgu7JGveuHmmyR9CnAPCie2N/x+iHrgnpYBIcCJWHBoMRv2TRWktsvw==}
+    deprecated: This is a stub types definition for chalk (https://github.com/chalk/chalk). chalk provides its own type definitions, so you don't need @types/chalk installed!
+
+  '@types/chroma-js@2.4.4':
+    resolution: {integrity: sha512-/DTccpHTaKomqussrn+ciEvfW4k6NAHzNzs/sts1TCqg333qNxOhy8TNIoQCmbGG3Tl8KdEhkGAssb1n3mTXiQ==}
 
   '@types/eslint@9.6.1':
     resolution: {integrity: sha512-FXx2pKgId/WyYo2jXw63kk7/+TY7u7AziEJxJAnSFzHlqTAS3Ync6SvgYAN/k4/PQpnnVuzoMuVnByKK2qp0ag==}
@@ -654,8 +664,8 @@ packages:
     peerDependencies:
       eslint: ^9.5.0
 
-  eslint-config-upleveled@8.6.21:
-    resolution: {integrity: sha512-7CMAVNLFvOB4hN32iql+CdnSGBcW2qJCSLoynNgEezat+blltP/9SeU8aeX/uLzgF8gHcOfbLV/TG6tkOemc9w==}
+  eslint-config-upleveled@8.7.0:
+    resolution: {integrity: sha512-a/DXUd2ZkBvzqI+sfTaq6mEHlolTxT98CiDeB16Y8YT0dfEWTyqBnwfqpOkZ1DpKAqkNQ8ekDj8j6FIEUjkxYA==}
     engines: {node: '>=20.9.0'}
     hasBin: true
     peerDependencies:
@@ -1383,9 +1393,6 @@ packages:
   queue-microtask@1.2.3:
     resolution: {integrity: sha512-NuaNSa6flKT5JaSYQzJok04JzTL1CA6aGhv5rfLW3PgqA+M2ChpZQnAC8h8i4ZFkBS8X5RqkDBHA7r4hej3K9A==}
 
-  random-color-generator-ts@1.0.1:
-    resolution: {integrity: sha512-G0dUbe2iJ/z7TwV2Bnw9u/rvtzQtv2GPjdnJ7W3g53tzzOZI40TsiNDkvaM9J5jn8AG5mUsOnZiYq3qKwz3bxQ==}
-
   random-hex@1.0.2:
     resolution: {integrity: sha512-MZa4hZIAFdVV/mzB1YZjdwrjzsjuYzR7gY1R9GDCQqGJYbbyQHp9+uS3T3vmhYM+GagELvufkE1eD0T1nSS1uQ==}
 
@@ -2026,6 +2033,12 @@ snapshots:
   '@pkgjs/parseargs@0.11.0':
     optional: true
 
+  '@types/chalk@2.2.0':
+    dependencies:
+      chalk: 5.3.0
+
+  '@types/chroma-js@2.4.4': {}
+
   '@types/eslint@9.6.1':
     dependencies:
       '@types/estree': 1.0.5
@@ -2576,7 +2589,7 @@ snapshots:
       eslint: 9.10.0
       find-up-simple: 1.0.0
 
-  eslint-config-upleveled@8.6.21(@babel/core@7.25.2)(@types/eslint@9.6.1)(@types/node@22.5.4)(@types/react-dom@18.3.0)(@types/react@18.3.5)(eslint@9.10.0)(globals@15.9.0)(typescript@5.6.2):
+  eslint-config-upleveled@8.7.0(@babel/core@7.25.2)(@types/eslint@9.6.1)(@types/node@22.5.4)(@types/react-dom@18.3.0)(@types/react@18.3.5)(eslint@9.10.0)(globals@15.9.0)(typescript@5.6.2):
     dependencies:
       '@babel/eslint-parser': 7.25.1(@babel/core@7.25.2)(eslint@9.10.0)
       '@eslint/compat': 1.1.1
@@ -3383,8 +3396,6 @@ snapshots:
   punycode@2.3.1: {}
 
   queue-microtask@1.2.3: {}
-
-  random-color-generator-ts@1.0.1: {}
 
   random-hex@1.0.2: {}
 
